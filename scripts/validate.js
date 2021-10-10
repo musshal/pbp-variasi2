@@ -47,7 +47,7 @@ function validateForm() {
 }
 
 function resetError() {
-  document.querySelectorAll("[id$='error_']").forEach(function (e) {
+  document.querySelectorAll("[id$='error_']").forEach((e) => {
     e.style.display = "none";
   });
   document.getElementById("success_nim").style.display = "none";

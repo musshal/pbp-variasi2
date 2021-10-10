@@ -25,7 +25,7 @@ function callAjax(url, inner) {
 }
 
 function checkNim(nim) {
-  const inner = "nim";
+  const inner = "success_nim";
   const url = `./lib/check_nim.php?nim=${nim}`;
 
   if (nim == "") {

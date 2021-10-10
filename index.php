@@ -25,7 +25,7 @@
               $fakultas = test_input($_POST["fakultas"]);
               $jurusan = test_input($_POST["jurusan"]);
 
-              $result = $db->query("INSERT INTO user(nama, nim, jenis_kelamin, alamat, id_fakultas) VALUES('$nama', '$nim', '$jk', '$alamat', '$fakultas', '$jurusan')");
+              $result = $db->query("INSERT INTO user(nama, nim, jenis_kelamin, alamat, id_fakultas, id_jurusan) VALUES('$nama', '$nim', '$jk', '$alamat', '$fakultas', '$jurusan')");
 
               if ($result) {
                 echo '<div class="alert alert-success">Data berhasil disimpan</div>';
@@ -42,7 +42,7 @@
             </div>
             <div class="mb-3">
               <label for="nim" class="form-label">NIM</label>
-              <input type="text" class="form-control" name="nim" id="nim" onkeyup="">
+              <input type="text" class="form-control" name="nim" id="nim" onkeyup="checkNim(this.value)">
               <small class="form-text text-danger" id="error_nim"></small>
               <small class="form-text text-success" id="success_nim"></small>
             </div>
